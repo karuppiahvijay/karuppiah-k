@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karuppiah K - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 13px;
+            color: #1a1a1a;
+            background: #fff;
+            line-height: 1.5;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 14mm 16mm;
+            background: #fff;
+        }
+
+        /* ── Header ── */
+        .header {
+            border-bottom: 2.5px solid #1a1a1a;
+            padding-bottom: 10px;
+            margin-bottom: 12px;
+        }
+        .header h1 {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #1a1a1a;
+        }
+        .header .title {
+            font-size: 13px;
+            font-weight: 500;
+            color: #555;
+            margin-top: 2px;
+        }
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 18px;
+            margin-top: 8px;
+            font-size: 12px;
+            color: #333;
+        }
+        .contact-row span::before {
+            content: "• ";
+            color: #888;
+        }
+        .contact-row span:first-child::before { content: ""; }
+
+        /* ── Sections ── */
+        .section { margin-bottom: 14px; }
+        .section-title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #333;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 3px;
+            margin-bottom: 9px;
+        }
+
+        /* ── Summary ── */
+        .summary p { color: #333; font-size: 12.5px; }
+
+        /* ── Experience ── */
+        .exp-item { margin-bottom: 11px; }
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .exp-header h3 { font-size: 13px; font-weight: 600; }
+        .exp-date {
+            font-size: 11.5px;
+            color: #555;
+            white-space: nowrap;
+        }
+        .exp-company {
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 4px;
+        }
+        .exp-item p, .exp-item ul {
+            font-size: 12px;
+            color: #333;
+        }
+        .exp-item ul { padding-left: 16px; }
+        .exp-item ul li { margin-bottom: 2px; }
+
+        /* ── Skills ── */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+        .skill-group h4 {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+        .skill-group p {
+            font-size: 11.5px;
+            color: #444;
+        }
+
+        /* ── Projects ── */
+        .project-item { margin-bottom: 9px; }
+        .project-item h3 { font-size: 13px; font-weight: 600; }
+        .project-item p { font-size: 12px; color: #333; }
+        .tags { margin-top: 3px; }
+        .tag {
+            display: inline-block;
+            font-size: 10.5px;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 1px 7px;
+            margin-right: 4px;
+            color: #444;
+        }
+
+        /* ── Education ── */
+        .edu-item { margin-bottom: 8px; }
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .edu-header h3 { font-size: 13px; font-weight: 600; }
+        .edu-header span { font-size: 11.5px; color: #555; }
+        .edu-item p { font-size: 12px; color: #555; }
+
+        /* ── Certifications ── */
+        .cert-item { font-size: 12px; margin-bottom: 5px; }
+        .cert-item strong { font-weight: 600; }
+
+        /* ── Print ── */
+        @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .page { margin: 0; padding: 12mm 14mm; width: 100%; }
+            .no-print { display: none; }
+        }
+
+        /* ── Print Button (web only) ── */
+        .print-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 30px;
+            background: #1a1a1a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .print-btn:hover { background: #333; }
+        @media print { .print-btn { display: none; } }
+    </style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">⬇ Save as PDF (Ctrl+P)</button>
+
+<div class="page">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>KARUPPIAH K</h1>
+        <div class="title">Full Stack Developer (In Training) &nbsp;|&nbsp; AWS Certified Solutions Architect</div>
+        <div class="contact-row">
+            <span>karuppiahk.15@gmail.com</span>
+            <span>+91 8300022145</span>
+            <span>linkedin.com/in/karuppiahvijay</span>
+            <span>karuppiah-k.netlify.app</span>
+            <span>Sivagangai, Tamil Nadu, India</span>
+        </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="section summary">
+        <div class="section-title">Summary</div>
+        <p>Versatile Computer Science graduate (B.E. 2024) with 1 year 6 months of professional work experience as a Junior Accountant &amp; Cluster Manager. Currently pursuing Full Stack Development with expertise in HTML, CSS, JavaScript, Java, and MySQL. AWS Certified Solutions Architect with additional internship experience in Artificial Intelligence and Cyber Security.</p>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+        <div class="section-title">Experience</div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <h3>Full Stack Developer Course</h3>
+                <span class="exp-date">Jan 2026 – Present</span>
+            </div>
+            <div class="exp-company">Online Training &nbsp;|&nbsp; Current</div>
+            <p>Pursuing an intensive Full Stack Development course covering modern frontend, backend APIs, databases, and cloud deployment.</p>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <h3>Junior Accountant &amp; Cluster Manager</h3>
+                <span class="exp-date">Oct 2024 – Apr 2026 &nbsp;(1 Yr 6 Mo)</span>
+            </div>
+            <div class="exp-company">Work Experience</div>
+            <ul>
+                <li>Handled day-to-day financial records, reconciliations, invoicing, and reporting.</li>
+                <li>Managed operations across multiple branches, coordinating teams and resources to ensure consistent performance and compliance.</li>
+            </ul>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <h3>AI Internship</h3>
+                <span class="exp-date">2023 (2 Months)</span>
+            </div>
+            <div class="exp-company">ACMEGRADE</div>
+            <p>Trained in Artificial Intelligence; completed a Face Detection project using AI techniques.</p>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <h3>Cyber Security Internship</h3>
+                <span class="exp-date">2023 (2 Months)</span>
+            </div>
+            <div class="exp-company">EDU-VERSITY</div>
+            <p>Trained in Cyber Security; developed an Ethical Hacking project using Kali Linux tools.</p>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <h3>Java Internship</h3>
+                <span class="exp-date">2023 (1 Month)</span>
+            </div>
+            <div class="exp-company">FOREVIEW TECHNOLOGIES PVT LTD</div>
+            <p>Focused on Java application development; implemented a project applying core Java concepts.</p>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <h4>Frontend</h4>
+                <p>HTML5, CSS3, JavaScript (ES6+), Responsive Design</p>
+            </div>
+            <div class="skill-group">
+                <h4>Backend &amp; Database</h4>
+                <p>Java (J2EE), MySQL, C, C++</p>
+            </div>
+            <div class="skill-group">
+                <h4>Cloud &amp; Security</h4>
+                <p>AWS Solutions Architect, Cyber Security, Ethical Hacking, Cloud Computing</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="section">
+        <div class="section-title">Projects</div>
+
+        <div class="project-item">
+            <h3>Event Organizer</h3>
+            <p>Web-based application for ordering and scheduling cultural and birthday events at specific locations and times.</p>
+            <div class="tags">
+                <span class="tag">Web App</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">JavaScript</span>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <h3>Cardiac Disease Prediction (CARDO)</h3>
+            <p>IoT-based application that monitors heart rates and predicts potential cardiac issues for patients in real-time.</p>
+            <div class="tags">
+                <span class="tag">IoT</span>
+                <span class="tag">AI/ML</span>
+                <span class="tag">Java</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+        <div class="section-title">Education</div>
+
+        <div class="edu-item">
+            <div class="edu-header">
+                <h3>B.E. Computer Science &amp; Engineering</h3>
+                <span>2020 – 2024</span>
+            </div>
+            <p>PERI Institute of Technology &nbsp;|&nbsp; CGPA: 8.06</p>
+        </div>
+
+        <div class="edu-item">
+            <div class="edu-header">
+                <h3>Higher Secondary (12th)</h3>
+                <span>2019 – 2020</span>
+            </div>
+            <p>Rajah's Higher Secondary School &nbsp;|&nbsp; 65%</p>
+        </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="section">
+        <div class="section-title">Certifications</div>
+        <div class="cert-item"><strong>AWS Certified Solutions Architect – Associate</strong> &nbsp;|&nbsp; Amazon Web Services</div>
+        <div class="cert-item"><strong>Cyber Security &amp; Ethical Hacking</strong> &nbsp;|&nbsp; Edu-Versity</div>
+        <div class="cert-item"><strong>Artificial Intelligence</strong> &nbsp;|&nbsp; ACMEGRADE</div>
+    </div>
+
+</div>
+
+<button class="print-btn no-print" onclick="window.print()">⬇ Save as PDF (Ctrl+P)</button>
+
+</body>
+</html>
